@@ -20,6 +20,8 @@ public class MakerHubController {
         this.makerHubService = makerHubService;
     }
     
+    // Coucou
+    
     @PostMapping("/create")
     @ResponseStatus(HttpStatus.CREATED)
     public void create(@RequestBody MakerHubForm form){
