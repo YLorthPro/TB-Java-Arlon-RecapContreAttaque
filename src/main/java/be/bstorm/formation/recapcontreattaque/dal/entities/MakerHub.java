@@ -1,9 +1,6 @@
 package be.bstorm.formation.recapcontreattaque.dal.entities;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import lombok.Data;
 
 import java.time.LocalDate;
@@ -21,5 +18,9 @@ public class MakerHub {
     private boolean isProjecteurOk;
 
     private LocalDate dateDePresentation;
+
+    @ManyToOne
+    @JoinColumn(name = "personne_id")
+    private Personne personne;
 
 }
